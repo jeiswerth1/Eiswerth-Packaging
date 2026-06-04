@@ -1,16 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Eiswerth Packaging Consulting | Medical Device Packaging Consulting</title>
+
+<meta name="description" content="Medical device packaging consulting specializing in packaging development, validation, sterilization support, ISO 11607 compliance, and commercialization readiness.">
+
+<meta name="keywords" content="medical device packaging consultant, ISO 11607, packaging validation, sterile barrier systems, packaging engineer, sterilization consultant">
+
+<meta name="author" content="Jonathan Eiswerth">
+
 <style>
 
 :root{
     --navy:#021C45;
     --navy-secondary:#032049;
     --gold:#CEA55E;
-
     --gray:#636A73;
     --gray-light:#969BA4;
-
     --white:#FDFDFD;
     --light:#F8FAFC;
-    --border:#D9DDE3;
+    --border:#E2E8F0;
 }
 
 *{
@@ -25,9 +37,9 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
+    background:var(--white);
     color:var(--navy);
     line-height:1.6;
-    background:var(--white);
 }
 
 .container{
@@ -36,12 +48,12 @@ body{
     margin:auto;
 }
 
-/* ===========================
-   NAVIGATION
-=========================== */
+/* ======================
+   HEADER
+====================== */
 
 header{
-    background:var(--white);
+    background:white;
     border-bottom:3px solid var(--gold);
     position:sticky;
     top:0;
@@ -52,13 +64,12 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:18px 0;
+    padding:15px 0;
 }
 
 .logo-img{
-    height:75px;
+    height:80px;
     width:auto;
-    display:block;
 }
 
 nav ul{
@@ -71,23 +82,22 @@ nav a{
     text-decoration:none;
     color:var(--navy);
     font-weight:600;
-    font-size:1rem;
-    transition:.2s;
+    transition:.25s;
 }
 
 nav a:hover{
     color:var(--gold);
 }
 
-/* ===========================
+/* ======================
    HERO
-=========================== */
+====================== */
 
 .hero{
     background:
     linear-gradient(
         rgba(2,28,69,.95),
-        rgba(3,32,73,.90)
+        rgba(3,32,73,.92)
     );
     color:white;
     text-align:center;
@@ -95,14 +105,14 @@ nav a:hover{
 }
 
 .hero h1{
-    font-size:3.2rem;
+    font-size:3.5rem;
     margin-bottom:20px;
 }
 
 .hero p{
     max-width:800px;
     margin:auto;
-    font-size:1.2rem;
+    font-size:1.25rem;
 }
 
 .button{
@@ -121,9 +131,9 @@ nav a:hover{
     background:#B8924D;
 }
 
-/* ===========================
+/* ======================
    SECTIONS
-=========================== */
+====================== */
 
 section{
     padding:90px 0;
@@ -137,7 +147,7 @@ section{
 }
 
 .section-title:after{
-    content:'';
+    content:"";
     display:block;
     width:80px;
     height:3px;
@@ -149,16 +159,16 @@ section{
     background:var(--light);
 }
 
-/* ===========================
+/* ======================
    CARDS
-=========================== */
+====================== */
 
 .grid{
     display:grid;
     gap:25px;
 }
 
-.services{
+.services-grid{
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 }
 
@@ -176,17 +186,17 @@ section{
 
 .card:hover{
     transform:translateY(-4px);
-    box-shadow:0 8px 20px rgba(2,28,69,.08);
+    box-shadow:0 10px 25px rgba(2,28,69,.08);
 }
 
 .card h3{
-    margin-bottom:12px;
     color:var(--navy);
+    margin-bottom:12px;
 }
 
-/* ===========================
-   BIO
-=========================== */
+/* ======================
+   FOUNDER
+====================== */
 
 .bio{
     display:grid;
@@ -200,9 +210,18 @@ section{
     border-radius:12px;
 }
 
-/* ===========================
-   CONTACT FORM
-=========================== */
+.bio h3{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.bio p{
+    margin-bottom:15px;
+}
+
+/* ======================
+   CONTACT
+====================== */
 
 .contact-form{
     max-width:700px;
@@ -222,7 +241,7 @@ button{
     background:var(--gold);
     color:white;
     border:none;
-    padding:14px 28px;
+    padding:14px 30px;
     border-radius:6px;
     cursor:pointer;
     font-weight:600;
@@ -232,9 +251,9 @@ button:hover{
     background:#B8924D;
 }
 
-/* ===========================
+/* ======================
    FOOTER
-=========================== */
+====================== */
 
 footer{
     background:var(--navy);
@@ -244,9 +263,9 @@ footer{
     border-top:3px solid var(--gold);
 }
 
-/* ===========================
+/* ======================
    MOBILE
-=========================== */
+====================== */
 
 @media(max-width:768px){
 
@@ -261,7 +280,7 @@ footer{
     }
 
     .hero h1{
-        font-size:2.2rem;
+        font-size:2.3rem;
     }
 
     .bio{
@@ -271,3 +290,242 @@ footer{
 }
 
 </style>
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<nav>
+
+<img src="logo.png"
+     alt="Eiswerth Packaging Consulting"
+     class="logo-img">
+
+<ul>
+<li><a href="#services">Services</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+</div>
+</header>
+
+<section class="hero">
+
+<div class="container">
+
+<h1>Medical Device Packaging Consulting</h1>
+
+<p>
+Helping medical device manufacturers develop, validate,
+and commercialize compliant packaging systems with confidence.
+</p>
+
+<a href="#contact" class="button">Schedule a Consultation</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">Services</h2>
+
+<div class="grid services-grid">
+
+<div class="card">
+<h3>Packaging Development</h3>
+<p>Package design, material selection, design verification, and development support.</p>
+</div>
+
+<div class="card">
+<h3>Packaging Validation</h3>
+<p>Protocol development, execution support, gap assessments, and reporting.</p>
+</div>
+
+<div class="card">
+<h3>Sterilization Support</h3>
+<p>ETO, Gamma, and Electron Beam packaging readiness and compatibility support.</p>
+</div>
+
+<div class="card">
+<h3>Supplier Evaluation</h3>
+<p>Packaging supplier assessments, technical reviews, and material selection.</p>
+</div>
+
+<div class="card">
+<h3>Risk Assessments</h3>
+<p>Packaging FMEAs, transportation evaluations, and design reviews.</p>
+</div>
+
+<div class="card">
+<h3>Strategic Consulting</h3>
+<p>Flexible support ranging from short-term projects to embedded engineering.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Founder</h2>
+
+<div class="bio">
+
+<img src="headshot.jpg" alt="Jonathan Eiswerth">
+
+<div>
+
+<h3>Jonathan Eiswerth</h3>
+
+<p>
+Principal Packaging Consultant
+</p>
+
+<p>
+Jonathan Eiswerth provides medical device packaging expertise focused on
+packaging development, validation, sterilization compatibility,
+commercialization readiness, and regulatory compliance.
+</p>
+
+<p>
+His approach combines technical expertise with practical execution to help
+medical device companies accelerate development while maintaining quality
+and compliance requirements.
+</p>
+
+<a href="https://linkedin.com" class="button">
+Connect on LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="experience" class="gray">
+
+<div class="container">
+
+<h2 class="section-title">Selected Experience</h2>
+
+<div class="grid experience-grid">
+
+<div class="card">
+<h3>Packaging Validation</h3>
+<p>Protocol development, execution support, report generation, and remediation.</p>
+</div>
+
+<div class="card">
+<h3>Sterile Barrier Systems</h3>
+<p>Tyvek pouches, thermoforms, trays, and custom sterile barrier systems.</p>
+</div>
+
+<div class="card">
+<h3>Sterilization Modalities</h3>
+<p>ETO, Gamma, and Electron Beam compatibility and readiness support.</p>
+</div>
+
+<div class="card">
+<h3>Regulatory Standards</h3>
+<p>ISO 11607, ASTM standards, transportation testing, and compliance support.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">Project Examples</h2>
+
+<div class="grid services-grid">
+
+<div class="card">
+<h3>Packaging Validation Recovery</h3>
+<p>Supported remediation activities and accelerated project completion timelines.</p>
+</div>
+
+<div class="card">
+<h3>Sterilization Readiness Assessment</h3>
+<p>Evaluated package materials and designs prior to sterilization validation.</p>
+</div>
+
+<div class="card">
+<h3>Supplier Selection Program</h3>
+<p>Led technical evaluations and supplier down-selection activities.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="gray">
+
+<div class="container">
+
+<h2 class="section-title">Contact Us</h2>
+
+<p style="text-align:center; margin-bottom:30px;">
+Call or email us to discuss your packaging needs.
+</p>
+
+<div class="contact-form">
+
+<form>
+
+<input type="text" placeholder="Name" required>
+
+<input type="text" placeholder="Company">
+
+<input type="email" placeholder="Email" required>
+
+<textarea rows="6" placeholder="How can we help?"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>
+© 2026 Eiswerth Packaging Consulting. All Rights Reserved.
+</p>
+
+<p>
+info@eiswerthconsulting.com
+</p>
+
+</footer>
+
+</body>
+</html>
