@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<img src="images/consulting logo.png" alt="White logo" width="80" height="80">
-
-<meta name="description" content="Medical device packaging consulting specializing in packaging development, validation, ISO 11607 compliance, sterilization support, and commercialization readiness.">
-
-<meta name="keywords" content="medical device packaging consultant, ISO 11607, packaging validation, sterile barrier systems, packaging engineer, sterilization consultant">
-
-<meta name="author" content="Jonathan Eiswerth">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <style>
 
 :root{
     --navy:#021C45;
-    --blue:#2563EB;
+    --navy-secondary:#032049;
+    --gold:#CEA55E;
+
+    --gray:#636A73;
+    --gray-light:#969BA4;
+
+    --white:#FDFDFD;
     --light:#F8FAFC;
-    --gray:#64748B;
-    --border:#E2E8F0;
+    --border:#D9DDE3;
 }
 
 *{
@@ -37,8 +25,9 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    color:#1E293B;
+    color:var(--navy);
     line-height:1.6;
+    background:var(--white);
 }
 
 .container{
@@ -47,51 +36,66 @@ body{
     margin:auto;
 }
 
+/* ===========================
+   NAVIGATION
+=========================== */
+
 header{
-    background:white;
-    border-bottom:1px solid var(--border);
+    background:var(--white);
+    border-bottom:3px solid var(--gold);
     position:sticky;
     top:0;
-    z-index:100;
+    z-index:1000;
 }
 
 nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 0;
+    padding:18px 0;
 }
 
-.logo{
-    font-size:1.4rem;
-    font-weight:700;
-    color:var(--navy);
+.logo-img{
+    height:75px;
+    width:auto;
+    display:block;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-}
-
-nav li{
-    margin-left:30px;
+    gap:35px;
 }
 
 nav a{
     text-decoration:none;
     color:var(--navy);
     font-weight:600;
+    font-size:1rem;
+    transition:.2s;
 }
 
+nav a:hover{
+    color:var(--gold);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
 .hero{
-    background:linear-gradient(rgba(15,23,42,.88), rgba(15,23,42,.88));
+    background:
+    linear-gradient(
+        rgba(2,28,69,.95),
+        rgba(3,32,73,.90)
+    );
     color:white;
     text-align:center;
     padding:140px 20px;
 }
 
 .hero h1{
-    font-size:3rem;
+    font-size:3.2rem;
     margin-bottom:20px;
 }
 
@@ -103,14 +107,23 @@ nav a{
 
 .button{
     display:inline-block;
-    margin-top:30px;
-    padding:14px 28px;
-    background:var(--blue);
+    margin-top:35px;
+    padding:15px 30px;
+    background:var(--gold);
     color:white;
     text-decoration:none;
     border-radius:6px;
     font-weight:600;
+    transition:.25s;
 }
+
+.button:hover{
+    background:#B8924D;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
 
 section{
     padding:90px 0;
@@ -119,9 +132,26 @@ section{
 .section-title{
     text-align:center;
     font-size:2rem;
-    margin-bottom:50px;
     color:var(--navy);
+    margin-bottom:60px;
 }
+
+.section-title:after{
+    content:'';
+    display:block;
+    width:80px;
+    height:3px;
+    background:var(--gold);
+    margin:15px auto 0;
+}
+
+.gray{
+    background:var(--light);
+}
+
+/* ===========================
+   CARDS
+=========================== */
 
 .grid{
     display:grid;
@@ -132,20 +162,31 @@ section{
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 }
 
+.experience-grid{
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+}
+
 .card{
     background:white;
-    padding:30px;
     border:1px solid var(--border);
     border-radius:10px;
+    padding:30px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(2,28,69,.08);
 }
 
 .card h3{
     margin-bottom:12px;
+    color:var(--navy);
 }
 
-.gray{
-    background:var(--light);
-}
+/* ===========================
+   BIO
+=========================== */
 
 .bio{
     display:grid;
@@ -159,18 +200,9 @@ section{
     border-radius:12px;
 }
 
-.experience-grid{
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-}
-
-.testimonials{
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-}
-
-blockquote{
-    font-style:italic;
-    margin-bottom:15px;
-}
+/* ===========================
+   CONTACT FORM
+=========================== */
 
 .contact-form{
     max-width:700px;
@@ -187,43 +219,49 @@ textarea{
 }
 
 button{
-    background:var(--blue);
+    background:var(--gold);
     color:white;
     border:none;
     padding:14px 28px;
     border-radius:6px;
     cursor:pointer;
+    font-weight:600;
 }
 
-.cta-buttons{
-    margin-top:20px;
+button:hover{
+    background:#B8924D;
 }
 
-.cta-buttons a{
-    margin-right:15px;
-}
+/* ===========================
+   FOOTER
+=========================== */
 
 footer{
     background:var(--navy);
     color:white;
     text-align:center;
-    padding:30px;
+    padding:40px 20px;
+    border-top:3px solid var(--gold);
 }
+
+/* ===========================
+   MOBILE
+=========================== */
 
 @media(max-width:768px){
 
     nav{
         flex-direction:column;
+        gap:20px;
     }
 
     nav ul{
-        margin-top:15px;
         flex-wrap:wrap;
         justify-content:center;
     }
 
     .hero h1{
-        font-size:2rem;
+        font-size:2.2rem;
     }
 
     .bio{
@@ -233,297 +271,3 @@ footer{
 }
 
 </style>
-</head>
-
-<body>
-
-<header>
-<div class="container">
-<nav>
-
-</div>
-
-<ul>
-<li><a href="#services">Services</a></li>
-<li><a href="#experience">Experience</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-</div>
-</header>
-
-<section class="hero">
-
-<div class="container">
-
-<img src="images/Blue Background with yellow logo.png" alt="Blue logo" width="350" height="350">
-
-<p>
-Helping medical device manufacturers develop, validate,
-and commercialize compliant packaging systems with confidence.
-</p>
-
-<a href="#contact" class="button">Get Started</a>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">Why Clients Work With Us</h2>
-
-<div class="grid services">
-
-<div class="card">
-<h3>Hands-On Execution</h3>
-<p>Practical support from planning through implementation.</p>
-</div>
-
-<div class="card">
-<h3>Packaging Expertise</h3>
-<p>Deep experience designing medical device packaging systems.</p>
-</div>
-
-<div class="card">
-<h3>Validation Support</h3>
-<p>Protocol development, execution, and report approval.</p>
-</div>
-
-<div class="card">
-<h3>Commercialization Focus</h3>
-<p>Helping teams move efficiently from development to launch.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="services" class="gray">
-
-<div class="container">
-
-<h2 class="section-title">Services</h2>
-
-<div class="grid services">
-
-<div class="card">
-<h3>Packaging Development</h3>
-<p>Material selection, design, and implementation.</p>
-</div>
-
-<div class="card">
-<h3>Packaging Validation</h3>
-<p>Validation planning, protocol development, execution support, and reporting.</p>
-</div>
-
-<div class="card">
-<h3>Sterilization Support</h3>
-<p>ETO, Gamma, and E-Beam packaging readiness assessments.</p>
-</div>
-
-<div class="card">
-<h3>Supplier Evaluation</h3>
-<p>Packaging supplier and material assessments.</p>
-</div>
-
-<div class="card">
-<h3>Risk Assessments</h3>
-<p>Packaging FMEAs and transportation risk evaluations.</p>
-</div>
-
-<div class="card">
-<h3>Strategic Consulting</h3>
-<p>Short-term projects or embedded engineering support.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">Founder</h2>
-
-<div class="bio">
-
-<img src="headshot.jpg" alt="Jonathan Eiswerth">
-
-<div>
-
-<h3>Jonathan Eiswerth</h3>
-
-<p style="margin-top:15px;">
-Principal Packaging Consultant
-</p>
-
-<p style="margin-top:20px;">
-Jonathan Eiswerth provides medical device packaging expertise
-focused on packaging development, validation, sterilization
-compatibility, and commercialization readiness. His approach
-combines technical knowledge with practical execution to help
-teams accelerate development while maintaining quality and compliance.
-</p>
-
-<div class="cta-buttons">
-
-<a href="https://linkedin.com/in/jonathan-eiswerth-105693113"
-class="button">LinkedIn</a>
-
-<a href="https://calendly.com/YOURCALENDLY"
-class="button">Book a Meeting</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="experience" class="gray">
-
-<div class="container">
-
-<h2 class="section-title">Selected Experience</h2>
-
-<div class="grid experience-grid">
-
-<div class="card">
-<h3>Packaging Validation</h3>
-<p>Protocol development, execution support, and reporting.</p>
-</div>
-
-<div class="card">
-<h3>Sterile Barrier Systems</h3>
-<p>Tyvek pouches, trays, thermoforms, and custom systems.</p>
-</div>
-
-<div class="card">
-<h3>Sterilization Modalities</h3>
-<p>ETO, Gamma, and Electron Beam.</p>
-</div>
-
-<div class="card">
-<h3>Regulatory Standards</h3>
-<p>ISO 11607, ASTM testing, and distribution validation.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="projects">
-
-<div class="container">
-
-<h2 class="section-title">Project Examples</h2>
-
-<div class="grid services">
-
-<div class="card">
-<h3>Package Validation Recovery</h3>
-<p>Supported remediation of validation gaps and accelerated project completion.</p>
-</div>
-
-<div class="card">
-<h3>Sterilization Readiness Assessment</h3>
-<p>Evaluated packaging materials and designs before sterilization validation.</p>
-</div>
-
-<div class="card">
-<h3>Supplier Selection</h3>
-<p>Led technical evaluations and supplier down-selection activities.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="gray">
-
-<div class="container">
-
-<h2 class="section-title">Testimonials</h2>
-
-<div class="grid testimonials">
-
-<div class="card">
-<blockquote>
-"Jonathan provided practical guidance and technical expertise that helped keep our packaging program on schedule."
-</blockquote>
-<strong>Medical Device Startup</strong>
-</div>
-
-<div class="card">
-<blockquote>
-"Strong packaging knowledge coupled with hands-on execution."
-</blockquote>
-<strong>Product Development Manager</strong>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="contact">
-
-<div class="container">
-
-<h2 class="section-title">Contact Us</h2>
-
-<p style="text-align:center; margin-bottom:30px;">
-Call or email us to discuss your packaging needs.
-</p>
-
-<div class="contact-form">
-
-<form action="https://formspree.io/f/YOURFORMID" method="POST">
-
-<input type="text" name="name" placeholder="Name" required>
-
-<input type="text" name="company" placeholder="Company">
-
-<input type="email" name="email" placeholder="Email" required>
-
-<textarea rows="6" name="message" placeholder="How can we help?"></textarea>
-
-<button type="submit">Send Message</button>
-
-</form>
-
-</div>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>© 2026 Eiswerth Packaging LLC. All Rights Reserved.</p>
-
-<p>
-jeiswerth@eiswerthpackaging.com | (248) 303-7860
-</p>
-
-</footer>
-
-</body>
-</html>
